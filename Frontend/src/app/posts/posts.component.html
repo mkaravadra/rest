@@ -1,0 +1,31 @@
+<div class="header">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr style="border:white">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4" *ngIf="!showOrHidePostItem">
+                <table class="table" >
+                    <tr>
+                        <td align="center"><div class="heading alert-warning" style="padding: 8px 5px 8px 14px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); border: 1px solid #fbeed5; -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px; ">Posts</div></td>
+                    </tr>
+                </table>
+                <div
+                    *ngFor="let postItem of posts; let i = index"
+                    [ngClass]="{'heading alert-info': i%2 === 0}"
+                    style="cursor: pointer;"
+                    (click)="onShowOrHidePostItem(postItem)">
+                    {{ postItem.title }}
+                </div>
+            </div>
+            <div class="col-xs-4"></div>
+            <div class="col-xs-12">
+                <hr style="border:white">
+                <div class="col-xs-3"></div>
+                <div class="col-xs-6" [hidden]="!showOrHidePostItem">
+                    <app-post [postItem]=postItem [showOrHidePostItem]=showOrHidePostItem></app-post>
+                </div>
+                <div class="col-xs-3"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="header">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr style="border:white">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4" *ngIf="!showOrHideUserItem">
+                <table class="table" >
+                    <tr>
+                        <td align="center"><div class="heading alert-warning" style="padding: 8px 5px 8px 14px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); border: 1px solid #fbeed5; -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px; ">Users</div></td>
+                    </tr>
+                </table>
+                <div
+                    *ngFor="let userItem of users; let i = index"
+                    [ngClass]="{'heading alert-info': i%2 === 0}"
+                    style="cursor: pointer;"
+                    (click)="onShowOrHideUserItem(userItem)">
+                    {{ userItem.name }}
+                </div>
+            </div>
+            <div class="col-xs-4"></div>
+            <div class="col-xs-12">
+                <hr style="border:white">
+                <div class="col-xs-3"></div>
+                <div class="col-xs-6" [hidden]="!showOrHideUserItem">
+                    <app-user [userItem]=userItem [showOrHideUserItem]=showOrHideUserItem></app-user>
+                </div>
+                <div class="col-xs-3"></div>
+            </div>
+        </div>
+    </div>
+</div>

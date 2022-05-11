@@ -1,0 +1,171 @@
+<table class="table" >
+	<tr>
+		<td align="center"><div class="heading alert-info" style="padding: 8px 5px 8px 14px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); border: 1px solid #fbeed5; -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px; ">User Details</div></td>
+	</tr>
+</table>
+
+<table class="table" *ngIf="showOrHideUserItem">
+	<tr>
+		<td >
+			<table class="tableborderless" width="100%">
+				<tr class="tr">
+                    <td align="left" style="padding: 5px;" class="td">
+						<label>Name: </label>
+                    </td>
+                    <td></td>
+                    <td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.name }}</div>
+					</td>
+				</tr>
+				<tr class="tr">
+                    <td align="left" style="padding: 5px;" class="td">
+						<label>Username: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.username }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px;" class="td">
+						<label>email: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.email }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px;" class="td">
+						<label>Address: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px; padding-left: 35px;" class="td">
+						<label>Street: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.address.street }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px; padding-left: 35px;" class="td">
+						<label>Suite: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.address.suite }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px; padding-left: 35px;" class="td">
+						<label>City: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.address.city }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px; padding-left: 35px;" class="td">
+						<label>ZipCode: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.address.zipcode }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px;" class="td">
+						<label>geo: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px; padding-left: 35px;" class="td">
+						<label>Lattitude: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.address.geo.lat }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px; padding-left: 35px;" class="td">
+						<label>Longitude: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.address.geo.lng }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px;" class="td">
+						<label>Phone: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.phone }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px;" class="td">
+						<label>Website: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.website }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px;" class="td">
+						<label>Company: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px; padding-left: 35px;" class="td">
+						<label>Name: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.company.name }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px; padding-left: 35px;" class="td">
+						<label>CatchPhrase: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.company.catchPhrase }}</div>
+					</td>
+                </tr>
+                <tr class="tr">
+                    <td align="left" style="padding: 5px; padding-left: 35px;" class="td">
+						<label>BS: </label>
+                    </td>
+                    <td></td>
+					<td align="left" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ userItem.company.bs }}</div>
+					</td>
+				</tr>
+			</table>
+			<table style="width:100%">
+				<tr class="blankrow">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+				</tr>
+            </table>
+        </td>
+    </tr>
+</table>

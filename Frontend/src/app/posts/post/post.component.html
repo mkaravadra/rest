@@ -1,0 +1,33 @@
+<table class="table" >
+	<tr>
+		<td align="center"><div class="heading alert-info" style="padding: 8px 5px 8px 14px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); border: 1px solid #fbeed5; -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px; ">Post Details</div></td>
+	</tr>
+</table>
+
+<table class="table" *ngIf="showOrHidePostItem">
+	<tr>
+		<td >
+			<table class="tableborderless">
+				<tr class="tr">
+					<td align="center" style="padding: 5px;" class="td">
+						<div class="special" style="padding-left: 15px;" >{{ postItem.title }}</div>
+					</td>
+				</tr>
+				<tr class="tr">
+					<td align="left" style="padding: 5px;" class="td">
+						<div style="padding: 8px 5px 8px 14px; ">{{ postItem.body }}</div>
+					</td>
+				</tr>
+			</table>
+			<table style="width:100%">
+				<tr class="blankrow">
+					<td></td>
+				</tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<div class="col-xs-12" [hidden]="!showOrHidePostItem">
+	<app-comments></app-comments>
+</div>

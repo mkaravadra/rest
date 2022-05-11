@@ -1,0 +1,20 @@
+<div class="header">
+  <hr style="border:white">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4" style="text-align: center;">
+        <a class="btn btn-primary" style="text-align: center;" href='#posts' (click)="onShowPosts()">Posts</a>
+        <a class="btn btn-primary" style="text-align: center;" href='#users' (click)="onShowUsers()">Users</a>
+      </div>
+      <div class="col-xs-4"></div>
+      <hr style="border:white"> 
+      <div [hidden]="hidePosts">
+        <app-posts></app-posts>
+      </div>
+      <div [hidden]="hideUsers">
+        <app-users></app-users>
+      </div>
+    </div>
+  </div>
+</div>

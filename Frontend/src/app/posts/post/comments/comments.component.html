@@ -1,0 +1,43 @@
+<div class="header">
+    <div class="row">
+      <div class="col-xs-12">
+        <hr style="border:white">
+            <table>
+                <tr>
+                    <td><span style="font-size: 15px; font-weight: bold; color: #000;">Comments:</span></td>
+                </tr>
+            </table>
+            <div
+                *ngFor="let commentItem of comments; let i = index"
+                [ngClass]="{'heading alert-info': i%2 === 0}">
+                <table class="table">
+                    <tr>
+                        <td >
+                            <table ng-if="key == 'key'" class="tableborderless">
+                                <tr class="tr">
+                                    <td align="left" style="padding: 5px;" class="td">
+                                        <div class="special" style="padding-left: 15px;" >{{ commentItem.name }}</div>
+                                    </td>
+                                    <td align="right" style="padding: 5px;" class="td">
+                                        <div class="special" style="padding-left: 15px;" >{{ commentItem.email }}</div>
+                                    </td>
+                                </tr>
+                                <tr class="tr">
+                                    <td align="left" style="padding: 5px;" class="td" colspan="2">
+                                        <div style="padding: 8px 5px 8px 14px; ">{{ commentItem.body }}</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table ng-if="key == 'key'" style="width:100%">
+                                <tr class="blankrow">
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
